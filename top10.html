@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aziende Informatiche</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html"><img src="img/icons8-comunita-50.png" alt=""></a>
+    <a href="top10.html"><img src="img/icons8-top-10-50.png" alt=""></a>
+    <a href="partiteiva.html"><img src="img/icons8-tariff-50.png" alt=""></a>
+    <a href="intelligenzaartificiale.html"><img src="img/icons8-intelligenza-artificiale-50.png" alt=""></a>
+    <a href="fatturatoaziende.html"><img src="img/icons8-fatturato-esterno-crescita-business-smashingstocks-isometrico-smashing-stocks-50.png" alt=""></a>
+    <a href="lavori_ai.html"><img src="img/icons8-aggiornamenti-disponibili-50.png" alt=""></a>
+    <a href=""><img src="img/icons8-linea-50.png" alt=""></a>
+    <a href="home.html"><img src="img/icons8-pulsante-di-spegnimento-50.png" alt=""></a>
+</div>
+
+<div class="testocentrale">
+    <div>
+        <img src="img/icons8-top-10-64.png" alt="">
+    </div>
+    <h1>TOP 10 Aziende Informatiche in Umbria</h1>
+    <canvas id="myBarChart" width="400" height="200"></canvas>
+</div>
+
+<div class="testocentrale">
+    <div>
+        <img src="/img/icons8-punto-interrogativo-64.png" alt="">
+    </div>
+    <h1>COSA TRATTANO LE AZIENDE?</h1>
+    <ol>
+        <b>IN-SILICO</b><br>
+        è un'azienda leader nello sviluppo di soluzioni cloud-based per l'analisi dei dati e 
+        l'intelligenza artificiale. L'azienda ha sviluppato una piattaforma cloud-based che consente 
+        alle aziende di raccogliere, analizzare e utilizzare grandi quantità di dati per migliorare 
+        le proprie attività.
+    </p>
+    <hr class="divider">
+    <p>
+        <b>SOGETI</b><br>
+        è un'azienda di consulenza IT che offre una gamma completa di servizi IT, tra cui consulenza, 
+        sviluppo software, outsourcing IT. L'azienda è specializzata nell'innovazione tecnologica e offre 
+        ai propri clienti le ultime tecnologie per migliorare le proprie attività.
+    </p>
+    <hr class="divider">
+    <p>
+        <b>PCSNET</b><br>
+        è un'azienda di sviluppo software che offre una gamma completa di servizi IT, tra cui sviluppo software, 
+        consulenza IT, e-commerce. L'azienda è specializzata nello sviluppo di soluzioni software innovative per 
+        le aziende di qualsiasi dimensione.
+    </p>
+    <hr class="divider">
+    <p>
+        <b>SOFTWARE ENGINEERING</b><br>
+        è un'azienda di sviluppo software che offre una gamma completa di servizi IT, tra cui sviluppo software, 
+        consulenza IT, outsourcing IT. L'azienda è specializzata nello sviluppo di soluzioni software innovative 
+        per i settori della pubblica amministrazione e della sanità.
+    </p>
+    <hr class="divider">
+    <p>
+        <b>READYTEC</b><br>
+        è un'azienda di sviluppo software che offre una gamma completa di servizi IT, tra cui sviluppo software, 
+        consulenza IT, e-commerce. L'azienda è specializzata nello sviluppo di soluzioni software innovative per il 
+        settore della moda e del lusso.
+    </p>
+    <hr class="divider">
+    <p>
+        <b>44 TECHNOLOGIES</b><br>
+        44 Technologies è un'azienda di sviluppo software che offre una gamma completa di servizi IT, 
+        tra cui sviluppo software, consulenza IT e sicurezza informatica. L'azienda è specializzata nello sviluppo 
+        di soluzioni software innovative per la sicurezza informatica.
+    </p>
+    <hr class="divider">
+    <p>
+        <b>2B2S</b><br>
+        è un'azienda di sviluppo software che offre una gamma completa di servizi IT, tra cui sviluppo software, 
+        consulenza IT e data science. L'azienda è specializzata nello sviluppo di soluzioni software innovative per 
+        l'analisi dei dati.
+    </p>
+    <hr class="divider">
+    <p>
+        <b>ICT Solutions</b><br>
+        Sviluppo software, Consulenza IT
+    </p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var ctx = document.getElementById('myBarChart').getContext('2d');
+
+        var barData = {
+            labels: ['In-Silico', 'Sogeti', 'PCSnet', 'Software Engineering', 'ReadyTEC', '44 Technologies', '2B2S', 'ICT Solution'],
+            datasets: [{
+                label: 'Fatturato (Milioni)',
+                backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                data: [100, 80, 60, 50, 40, 35, 30, 25]
+            },
+            {
+                label: 'Dipendenti (Persone)',
+                backgroundColor: 'rgba(207, 47, 116)',
+                borderColor: 'rgba(207, 47, 116)',
+                borderWidth: 1,
+                data: [200, 150, 100, 80, 70, 60, 50, 40]
+            }]
+        };
+
+        var barChart = new Chart(ctx, {
+            type: 'bar',
+            data: barData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

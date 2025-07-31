@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aziende Informatiche</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html"><img src="img/icons8-comunita-50.png" alt=""></a>
+    <a href="top10.html"><img src="img/icons8-top-10-50.png" alt=""></a>
+    <a href="partiteiva.html"><img src="img/icons8-tariff-50.png" alt=""></a>
+    <a href="intelligenzaartificiale.html"><img src="img/icons8-intelligenza-artificiale-50.png" alt=""></a>
+    <a href="fatturatoaziende.html"><img src="img/icons8-fatturato-esterno-crescita-business-smashingstocks-isometrico-smashing-stocks-50.png" alt=""></a>
+    <a href="lavori_ai.html"><img src="img/icons8-aggiornamenti-disponibili-50.png" alt=""></a>
+    <a href=""><img src="img/icons8-linea-50.png" alt=""></a>
+    <a href="home.html"><img src="img/icons8-pulsante-di-spegnimento-50.png" alt=""></a>
+</div>
+
+<div class="testocentrale">
+    <div>
+        <img src="img/icons8-intelligenza-artificiale-64.png" alt="">
+        <img src="img/icons8-ufficio-50.png" alt="">
+    </div>
+    <h1>Lavori Sostituibili Da Parte Dell'Intelligenza Artificiale</h1>
+    <h3>
+        <b>SPIEGAZIONE DEL GRAFICO:</b><br>
+        Il grafico a barre rappresenta il grado di sostituibilità di vari lavori da parte dell'intelligenza artificiale, 
+        utilizzando una scala da 1 a 5. Ogni valore indica quanto un lavoro potrebbe essere rimpiazzato dalla tecnologia AI.
+        <p>
+            <b>LEGENDA:</b><br>
+        </p>
+        <p>
+            1 - Non Sostituibile <br>
+            2 - Poco Sostituibile <br>
+            3 - Parzialmente Sostituibile <br>
+            4 - Discretamente Sostituibile <br>
+            5 - Completamente Sostituibile <br>
+        </p>
+    </h3>
+    <canvas id="myBarChart" width="400" height="200"></canvas>
+</div>
+
+<div class="testocentrale">
+    <div>
+        <img src="/img/icons8-punto-interrogativo-64.png" alt="">
+    </div>
+    <h1>CHE COS'È?</h1>
+    <ol>
+        <b>L'intelligenza artificiale</b> è un campo dell'informatica che si occupa dello sviluppo di sistemi 
+        e programmi capaci di eseguire compiti che normalmente richiederebbero l'intelligenza umana. 
+        Questi sistemi sono in grado di apprendere dai dati, riconoscere pattern, prendere decisioni e risolvere 
+        problemi in maniera autonoma.
+    </ol>
+    <div>
+        <hr class="divider">
+    </div>
+    <div>
+        <img src="img/icons8-aggiornamenti-disponibili-64.png" alt="">
+    </div>
+    <h1>La Sostituibilità dei Lavori con l'Intelligenza Artificiale</h1>
+    <p>
+        <b>Lavori Non Sostituibili (1) <br>
+        Alcuni lavori richiedono abilità intrinsecamente umane, che l'IA non può replicare. Psicologi e artisti, come pittori e scultori, sono esempi emblematici. La capacità di empatia, comprensione umana e creatività artistica sono uniche e insostituibili, rendendo questi ruoli difficilmente automatizzabili.
+    </p>
+    <p>
+        <b>Lavori Poco Sostituibili (2) <br>
+        Gli insegnanti e i medici specialisti rientrano in questa categoria. Mentre l'IA può supportare l'insegnamento e la diagnosi medica, l'interazione umana è fondamentale per motivare gli studenti e comprendere complessità cliniche che richiedono un giudizio esperto e una relazione di fiducia con i pazienti.
+    </p>
+    <p>
+        <b>Lavori Parzialmente Sostituibili (3) <br>
+        Giornalisti e avvocati possono beneficiare dell'assistenza dell'IA nella raccolta dati e nella gestione di documenti. Tuttavia, la narrazione di notizie e la rappresentanza legale richiedono un livello di giudizio e competenza che solo gli esseri umani possono offrire. L'IA può facilitare il lavoro, ma non può sostituire completamente il ruolo umano.
+    </p>
+    <p>
+        <b>Lavori Discretamente Sostituibili (4) <br>
+        Contabili e tecnici di laboratorio sono lavori in cui l'IA può automatizzare molte operazioni. Nei lavori contabili, le operazioni di routine possono essere gestite da software avanzati, mentre l'analisi complessa e la consulenza necessitano ancora di una supervisione umana. Analogamente, in un laboratorio, molte analisi possono essere eseguite da macchine, ma l'interpretazione dei risultati richiede competenze umane.
+    </p>
+    <p>
+        <b>Lavori Completamente Sostituibili (5) <br>
+            Operazioni di catena di montaggio e addetti alla data entry sono esempi di lavori che possono essere completamente automatizzati. I processi ripetitivi e prevedibili sono facilmente gestiti da sistemi di intelligenza artificiale, riducendo la necessità di intervento umano e migliorando l'efficienza produttiva.
+    </p>
+</div>
+
+<script>
+            // Rimuovi questa sezione se non hai bisogno del grafico a linea
+            document.addEventListener('DOMContentLoaded', function() {
+        var ctx = document.getElementById('myBarChart').getContext('2d');
+
+        var barData = {
+            labels: ['Psicologi', 'Pittori', 'Scultori', 'Operatori Di Catena Di Montaggio', 'Addetti Ad Inserire Dati Online (Data Entry)', 'Insegnanti', 'Medici Specialistici', 'Contabili', 'Tecnici Informatici', 'Giornalisti', 'Avvocati'],
+            datasets: [{
+                label: 'LAVORI',
+                backgroundColor: 'rgba(171, 205, 239, 0.5)',
+                borderColor: 'rgba(171, 205, 239, 1.0)',
+                borderWidth: 1,
+                data: [1, 1, 1, 5, 5, 2, 2, 4, 4, 3, 3],
+            },]
+        };
+
+        var barChart = new Chart(ctx, {
+            type: 'bar',
+            data: barData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aziende Informatiche</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-6v9zzC/MeU8UaQZsHH+5OL+Pv6oK0kUGqDUNwE7v0sd6vP9SlT5tZmByGrqKbqNShOSMRWY2DuJAv5w/tR3+Qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html"><img src="img/icons8-comunita-50.png" alt=""></a>
+    <a href="top10.html"><img src="img/icons8-top-10-50.png" alt=""></a>
+    <a href="partiteiva.html"><img src="img/icons8-tariff-50.png" alt=""></a>
+    <a href="intelligenzaartificiale.html"><img src="img/icons8-intelligenza-artificiale-50.png" alt=""></a>
+    <a href="fatturatoaziende.html"><img src="img/icons8-fatturato-esterno-crescita-business-smashingstocks-isometrico-smashing-stocks-50.png" alt=""></a>
+    <a href="lavori_ai.html"><img src="img/icons8-aggiornamenti-disponibili-50.png" alt=""></a>
+    <a href=""><img src="img/icons8-linea-50.png" alt=""></a>
+    <a href="home.html"><img src="img/icons8-pulsante-di-spegnimento-50.png" alt=""></a>
+</div>
+
+<div class="testocentrale">
+    <div class="social">
+        <img src="img/icons8-investimento-50.png" alt="">
+    </div>
+    <h1>Aziende nel territorio Umbro</h1>
+    <h3>
+        Ci sono circa 51.500 aziende nel territorio Umbro<br>
+        di cui solo 4.000 operano nel campo Informatico.
+    </h3>
+    <canvas id="pieChart" style="width: 5px; height: 5px;"></canvas>
+</div>
+
+<hr class="divider">
+
+<div class="testocentrale">
+    <div>
+        <img src="/img/icons8-sito-web-100.png" alt="">
+        <img src="/img/icons8-applicazione-100.png" alt="">
+    </div>
+    <h1>Su 51.500 aziende quante hanno un sito web o un'applicazione</h1>
+    <h3>
+        Al giorno d'oggi per un'azienda avere un <u>Sito Web</u> o un'<u>Applicazione</u><br>
+        significa essere visibili e accessibili ai potenziali<br> 
+        clienti, Promuovere i propri servizi e Fornire assistenza ai clienti.
+    </h3>
+    <canvas id="pieChart2"></canvas>
+</div>
+
+<hr class="divider">
+
+<div class="testocentrale">
+    <div>
+        <img src="img/icons8-comunita-50.png" alt="">
+    </div>
+    <h1>Utilizzo dei Social delle Aziende Umbre</h1>
+    <h3>
+        Per un'azienda i social hanno un valore molto significativo,<br>
+        Come ad esempio raggiungere un pubblico più ampio, Per<br>
+        vendere i propri prodotti o servizi, Raccogliere dei<br>
+        dei feedback dai clienti molto utili per migliorare l'azienda.<br>
+        <hr class="divider">
+    </h3>
+    <div class="social">
+        <img src="img/instagram.png" alt="">
+        <img src="img/icons8-linkedin-48.png" alt="">
+        <img src="img/icons8-facebook-48.png" alt="">
+        <img src="img/icons8-tic-toc-50.png" alt="">
+        <img src="img/icons8-x-50.png" alt="">
+        <img src="img/icons8-riproduci-youtube-48.png" alt="">
+        <img src="img/icons8-facebook-messenger-48.png" alt="">
+        <img src="img/icons8-whatsapp-48.png" alt="">
+        <hr class="divider">
+    </div>
+    <canvas id="pieChart3"></canvas>
+</div>
+
+<hr class="divider">
+
+<div class="testocentrale">
+    <div>
+        <img src="img/icons8-tecnologia-100.png" alt="">
+    </div>
+    <h1>Valutazione della tecnologia nelle Aziende durante gli anni</h1>
+    <h3>
+        <b>SPIEGAZIONE DEL GRAFICO:</b><br>
+        Questo grafico a linea del tempo spiega la qualità e la tecnologia<br>
+        delle aziende nel territorio Umbro, assegnando una valutazione<br>
+        da 1 a 5 in base alla qualità delle aziende nel tempo.<br>
+        <p>
+            <b>LEGENDA:</b><br>
+        </p>
+        <p>
+            1 - Nullo <br>
+            2 - Scarso <br>
+            3 - Parziale <br>
+            4 - Discreto <br>
+            5 - Ottimo <br>
+        </p>
+    </h3>
+    <canvas id="lineChart"></canvas>
+</div>
+
+<hr class="divider">
+
+<div class="testocentrale">
+    <div>
+        <img src="img/icons8-gestione-sviluppo-commerciale-50.png" alt="">
+    </div>
+    <h1>Dipendenti Medi nelle Aziende Informatiche e Altre</h1>
+    <h3>
+        in media nelle aziende informatiche ci sono 8 dipendenti,<br>
+        invece di dipendenti non informatici ce ne sono circa 5 nelle altre aziende.
+    </h3>
+    <canvas id="barChart"></canvas>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Dati del primo grafico a torta
+        var pieData = {
+            labels: ['Aziende Informatiche', 'Altre Aziende'],
+            datasets: [{
+                data: [3, 97],
+                backgroundColor: ['#ff9999', '#66b3ff']
+            }]
+        };
+
+        var pieChart = new Chart(document.getElementById('pieChart'), {
+            type: 'doughnut',
+            data: pieData,
+            options: {
+                width: 20,
+                height: 20
+            }
+        });
+
+        // Dati del secondo grafico a torta
+        var pieData2 = {
+            labels: ['Non hanno il sito web', 'Hanno il sito web', 'Applicazione'],
+            datasets: [{
+                data: [17, 83, 70],
+                backgroundColor: ['#ffcc99', '#ccffcc', '#3DA4D5']
+            }]
+        };
+
+        var pieChart2 = new Chart(document.getElementById('pieChart2'), {
+            type: 'doughnut',
+            data: pieData2,
+            options: {
+                width: 50,
+                height: 50
+            }
+        });
+
+        // Dati del terzo grafico a torta
+        var pieData3 = {
+            labels: ['Instagram', 'Linkedin', 'Facebook', 'Tik Tok', 'X', 'YouTube', 'Messenger', 'WhatsApp'],
+            datasets: [{
+                data: [75, 85, 90, 45, 35, 65, 55, 60],
+                backgroundColor: ['#Be25ad', '#45b0da', '#4580da', '#000000', '#616161', '#Ff2505',
+                '#9705ff','#00a135']
+            }]
+        };
+
+        var pieChart3 = new Chart(document.getElementById('pieChart3'), {
+            type: 'doughnut',
+            data: pieData3,
+            options: {
+                width: 50,
+                height: 50
+            }
+        });
+
+        // Rimuovi questa sezione se non hai bisogno del grafico a linea
+        var lineData = {
+            labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020', 'OGGI'],
+            datasets: [{
+                label: 'Tecnologia Nelle Aziende',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [1.5, 2, 3, 4, 4, 5, 5, 7],
+                fill: false
+            },
+            {
+                label: 'Aziende in Umbria',
+                borderColor: 'rgba(255, 0, 0, 1)',
+                data: [3, 3.5, 4, 4.5, 5, 5.5, 5.2, 5.3],
+                fill: false
+            },
+            {
+                label: 'Aziende Informatiche in Umbria',
+                borderColor: 'rgba(119, 163, 69)',
+                data: [1, 1.5, 2, 2.5, 3.5, 3.5, 4.5, 4.5],
+                fill: false
+            }]
+        };
+
+        var lineChart = new Chart(document.getElementById('lineChart'), {
+            type: 'line',
+            data: lineData,
+            options: {
+                width: 200,
+                height: 100
+            }
+        });
+
+        // Rimuovi questa sezione se non hai bisogno del grafico a barre
+        var barData = {
+            labels: ['Numero di dipendenti medi nelle Aziende Informatiche e Altre Aziende'],
+            datasets: [{
+                label: 'Numero Medio di Dipendenti Informatici',
+                backgroundColor: 'rgba(148, 87, 235, 0.8)',
+                data: [8] // Impostiamo un valore arbitrario per il numero di dipendenti
+            },
+            {
+                label: 'Numero Medio di Dipendenti non Informatici',
+                backgroundColor: '#99ff99',
+                data: [5] // Impostiamo un valore arbitrario per il numero di dipendenti
+            }]
+        };
+
+        var barChart = new Chart(document.getElementById('barChart'), {
+            type: 'bar',
+            data: barData,
+            options: {
+                width: 100,
+                height: 100
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
+

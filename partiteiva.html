@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aziende Informatiche</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html"><img src="img/icons8-comunita-50.png" alt=""></a>
+    <a href="top10.html"><img src="img/icons8-top-10-50.png" alt=""></a>
+    <a href="partiteiva.html"><img src="img/icons8-tariff-50.png" alt=""></a>
+    <a href="intelligenzaartificiale.html"><img src="img/icons8-intelligenza-artificiale-50.png" alt=""></a>
+    <a href="fatturatoaziende.html"><img src="img/icons8-fatturato-esterno-crescita-business-smashingstocks-isometrico-smashing-stocks-50.png" alt=""></a>
+    <a href="lavori_ai.html"><img src="img/icons8-aggiornamenti-disponibili-50.png" alt=""></a>
+    <a href=""><img src="img/icons8-linea-50.png" alt=""></a>
+    <a href="home.html"><img src="img/icons8-pulsante-di-spegnimento-50.png" alt=""></a>
+</div>
+
+<div class="testocentrale">
+    <div>
+        <img src="img/icons8-p-50.png" alt="">
+        <img src="img/icons8-punto-24.png" alt="">
+        <img src="img/icons8-i-50.png" alt="">
+        <img src="img/icons8-v-50.png" alt="">
+        <img src="img/icons8-a-50.png" alt="">
+    </div>
+    <h1>Crescita delle Partite IVA negli anni</h1>
+    <canvas id="lineChart" width="400" height="200"></canvas>
+</div>
+
+<div class="testocentrale">
+    <div>
+        <img src="/img/icons8-punto-interrogativo-64.png" alt="">
+    </div>
+    <h1>CHE COS'È?</h1>
+    <ol>
+        <b>La Partita IVA</b>, in Italia, è un numero di identificazione fiscale assegnato a imprenditori individuali, liberi 
+        professionisti e altre entità commerciali. Questo codice è utilizzato per identificare fiscalmente 
+        una persona fisica o giuridica coinvolta in attività commerciali o professionali.
+    </ol>
+    <div>
+        <hr class="divider">
+    </div>
+    <ol>
+        <b>La Partita IVA</b> è uno strumento fondamentale per le attività commerciali in Italia e svolge un ruolo 
+        chiave nel monitorare le transazioni finanziarie e garantire la conformità fiscale.
+    </ol>
+</div>
+
+<script>
+            // Rimuovi questa sezione se non hai bisogno del grafico a linea
+            var lineData = {
+            labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020', 'OGGI'],
+            datasets: [{
+                label: 'Partite IVA Umbria (MILA)',
+                borderColor: 'rgba(190, 138, 195, 0.5)',
+                data: [1.5, 1.75, 1.95, 2.5, 2.5, 2.65, 3.0, 3.1],
+                fill: false
+            },
+            {
+                label: 'Partite IVA in Italia (MILIONI)',
+                borderColor: 'rgba(75, 156, 195, 0.5)',
+                data: [2.0, 2.5, 2.9, 3.6, 4.0, 4.7, 5.1, 5.3],
+                fill: false
+            },
+            {
+                label: 'Partite IVA in Europa (MILIONI)',
+                borderColor: 'rgba(125, 32, 21, 0.6)',
+                data: [30, 34.0, 42.0, 45.0, 49.0, 55.0, 58.0, 62],
+                fill: false
+            }]
+        };
+
+        var lineChart = new Chart(document.getElementById('lineChart'), {
+            type: 'line',
+            data: lineData,
+            options: {
+                width: 400,
+                height: 400
+            }
+        });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

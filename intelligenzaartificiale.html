@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aziende Informatiche</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html"><img src="img/icons8-comunita-50.png" alt=""></a>
+    <a href="top10.html"><img src="img/icons8-top-10-50.png" alt=""></a>
+    <a href="partiteiva.html"><img src="img/icons8-tariff-50.png" alt=""></a>
+    <a href="intelligenzaartificiale.html"><img src="img/icons8-intelligenza-artificiale-50.png" alt=""></a>
+    <a href="fatturatoaziende.html"><img src="img/icons8-fatturato-esterno-crescita-business-smashingstocks-isometrico-smashing-stocks-50.png" alt=""></a>
+    <a href="lavori_ai.html"><img src="img/icons8-aggiornamenti-disponibili-50.png" alt=""></a>
+    <a href=""><img src="img/icons8-linea-50.png" alt=""></a>
+    <a href="home.html"><img src="img/icons8-pulsante-di-spegnimento-50.png" alt=""></a>
+</div>
+
+<div class="testocentrale">
+    <div>
+        <img src="img/icons8-intelligenza-artificiale-64.png" alt="">
+    </div>
+    <h1>Utilizzo Dell'Intelligenza Artificiale Negli Anni</h1>
+    <canvas id="lineChart" width="400" height="200"></canvas>
+</div>
+
+<div class="testocentrale">
+    <div>
+        <img src="/img/icons8-punto-interrogativo-64.png" alt="">
+    </div>
+    <h1>CHE COS'È?</h1>
+    <ol>
+        <b>L'intelligenza artificiale</b> è un campo dell'informatica che si occupa dello sviluppo di sistemi 
+        e programmi capaci di eseguire compiti che normalmente richiederebbero l'intelligenza umana. 
+        Questi sistemi sono in grado di apprendere dai dati, riconoscere pattern, prendere decisioni e risolvere 
+        problemi in maniera autonoma.
+    </ol>
+    <div>
+        <hr class="divider">
+    </div>
+    <div>
+        <img src="img/icons8-tariff-64.png" alt="">
+    </div>
+    <h1>CHE IMPATTO HA AVUTO NELLE AZIENDE</h1>
+    <ul>
+        <li>
+            <b>Automatizzazione dei processi:</b> L'IA ha reso possibile automatizzare una vasta gamma di processi aziendali, 
+            riducendo la dipendenza dalle risorse umane per attività ripetitive e routine. Ciò ha portato a una maggiore
+            efficienza operativa e a una riduzione dei costi.
+        </li>
+        <li>
+            <b>Analisi dei dati avanzata:</b> L'IA è stata impiegata per analizzare grandi volumi di dati in modi che non 
+            sarebbero possibili con metodi tradizionali. Ciò ha consentito alle aziende di estrarre insight preziosi 
+            dai propri dati, informando decisioni strategiche e tattiche.
+        </li>
+        <li>
+            <b>Personalizzazione dei servizi</b> e dei prodotti: Grazie all'IA, le aziende possono offrire esperienze 
+            personalizzate ai propri clienti, adattando i loro prodotti e servizi in base ai comportamenti, alle 
+            preferenze e alle esigenze individuali.
+        </li>
+        <li>
+            <b>Assistenza clienti migliorata:</b> I chatbot basati sull'IA sono diventati sempre più comuni nelle attività 
+            di assistenza clienti, consentendo alle aziende di fornire supporto 24/7 in modo efficiente e personalizzato.
+        </li>
+        <li>
+            <b>Previsione della domanda e ottimizzazione della catena di approvvigionamento:</b> L'IA è stata utilizzata 
+            per prevedere la domanda dei clienti e ottimizzare la catena di approvvigionamento, consentendo alle 
+            aziende di ridurre i costi legati agli eccessi di inventario e alle carenze di approvvigionamento.
+        </li>
+        <li>
+            <b>Sviluppo di nuovi prodotti e servizi:</b> L'IA ha aperto nuove possibilità per lo sviluppo di prodotti e 
+            servizi innovativi, consentendo alle aziende di creare soluzioni personalizzate e di anticipare le 
+            esigenze dei clienti.
+        </li>
+    </ul>
+</div>
+
+<script>
+            // Rimuovi questa sezione se non hai bisogno del grafico a linea
+            var lineData = {
+            labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020', '2023', 'OGGI'],
+            datasets: [{
+                label: 'Persone che Utilizzano Intelligenza Artificiale (MILIONI)',
+                borderColor: 'rgba(255, 99, 71)',
+                data: [1, 10, 100, 1000, 1300, 1500, 1550, 5000, 10000],
+                fill: false
+            }]
+        };
+
+        var lineChart = new Chart(document.getElementById('lineChart'), {
+            type: 'line',
+            data: lineData,
+            options: {
+                width: 400,
+                height: 400
+            }
+        });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
