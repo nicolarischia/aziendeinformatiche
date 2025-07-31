@@ -1,3 +1,5 @@
+![Copertina](copertina.png)
+
 # Sito Web Aziende Informatiche in Umbria
 
 ## Obiettivo
