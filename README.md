@@ -1,13 +1,27 @@
-![Copertina](copertina.png)
+![🖼️ Copertina](copertina.png)
 
-# Sito Web Aziende Informatiche in Umbria
+# 🏢 Sito Web – Aziende Informatiche in Umbria
 
-## Obiettivo
+## 🎯 Obiettivo del Progetto
 
-Ho creato questo sito web utilizzando HTML e CSS, applicando le conoscenze acquisite durante gli anni scolastici nel campo della realizzazione di siti web. Il sito è stato progettato per visualizzare le statistiche delle aziende locali dell'Umbria, implementando grafici a torta con l'assistenza di ChatGPT. Ho utilizzato Google per ricavare le informazioni sulle aziende. Inoltre, ho sviluppato varie pagine all'interno del sito, tra cui una dedicata alle prime 10 aziende, una alla distribuzione delle partite IVA aperte in Umbria, Italia ed Europa, e un'altra pagina che illustrava, tramite un grafico, l'evoluzione dell'utilizzo dell'intelligenza artificiale nel corso degli anni.
+Ho realizzato questo sito web utilizzando **HTML** e **CSS**, applicando le competenze acquisite nel corso degli anni scolastici nel campo della progettazione di pagine web.
 
-Cliccando il bottone di seguito si può vedere il sito web online, per l'host del sito web ho utilizzato la piattaforma gratuita Tiiny.Host che permette di caricare un sito web online.
+🧠 Il sito è stato progettato per:
 
-## Preview
+- Visualizzare **statistiche** sulle aziende informatiche presenti in Umbria
+- Implementare **grafici a torta 📊** con il supporto di ChatGPT
+- Recuperare **dati e informazioni** tramite ricerche su Google
 
-🌐 [SITO WEB ONLINE](https://aziendeumbre.tiiny.site/index.html)
+📁 Il sito include diverse sezioni, tra cui:
+
+- 🔟 **Top 10 aziende informatiche** in Umbria  
+- 📈 **Distribuzione delle partite IVA** in Umbria, Italia ed Europa  
+- 🤖 **Evoluzione dell’uso dell’intelligenza artificiale** nel tempo, tramite grafico  
+
+🖥️ Il sito è stato **hostato gratuitamente** su **Tiiny.Host**, una piattaforma semplice che consente di caricare un progetto web statico online.
+
+---
+
+## 🔍 Preview del Sito
+
+🌐 **[Clicca qui per vedere il sito online](https://aziendeumbre.tiiny.site/index.html)**
